@@ -1,0 +1,175 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f7f9fc;
+}
+
+/* Navigation */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  z-index: 10;
+}
+
+.navbar .logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffd366;
+}
+
+/* Hero section */
+.hero {
+  background-image: url('hero.png');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(5, 27, 44, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Sections */
+.section {
+  padding: 60px 10%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #005c97;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #051b2c;
+}
+
+.section h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #0a3e5b;
+}
+
+.section p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.section ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.section ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Articles */
+article {
+  margin-bottom: 20px;
+}
+
+article h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #005c97;
+}
+
+article p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #051b2c;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 15px;
+    display: none;
+  }
+}
