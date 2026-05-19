@@ -146,6 +146,41 @@ article p {
   color: #333;
 }
 
+.papers-table {
+  width: 90%;
+  min-width: 972px;
+  border-collapse: collapse;
+  margin: 10px auto 0;
+  border: 1px solid #c7d4e2;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 10px 24px rgba(5, 27, 44, 0.08);
+}
+
+.papers-table th,
+.papers-table td {
+  border: 1px solid #d7e1ea;
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.papers-table th {
+  background: #f2f5f8;
+  color: #051b2c;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.papers-table tbody tr:nth-child(even) {
+  background-color: #f6fafe;
+}
+
+.papers-table tbody tr:hover {
+  background-color: #ebf4fb;
+}
+
 /* Footer */
 footer {
   background-color: #051b2c;
@@ -171,5 +206,11 @@ footer {
     right: 0;
     padding: 15px;
     display: none;
+  }
+
+  .papers-table {
+    display: block;
+    overflow-x: auto;
+    white-space: normal;
   }
 }
